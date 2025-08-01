@@ -1,0 +1,26 @@
+.navbar {
+    padding: 0 1.5rem;
+    background-color: #00c3ff; // colore personalizzato
+    color: rgb(255, 255, 255); // occhio al contrasto
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .nav-links a {
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 1rem;
+        text-transform: none; // togli il maiuscolo forzato
+    }
+
+    .active-link {
+        border-bottom: 2px solid white;
+    }
+}

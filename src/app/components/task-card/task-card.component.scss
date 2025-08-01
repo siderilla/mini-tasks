@@ -1,0 +1,17 @@
+.card {
+    max-width: 400px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border-color: rgb(178, 206, 231);
+}
+
+.header-section {
+    align-items: start;
+}
+
+.button-complete {
+    background-color: rgb(70, 161, 221);
+    color: white;
+}
