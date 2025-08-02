@@ -1,20 +1,14 @@
-<div>
+<div [formGroup]="taskForm">
     <h2>Nuova Task</h2>
     <label for="title">Titolo</label>
-    <input id="title" type="text">
-
-    <label for="description">Descrizione:</label>
-    <textarea id="description"></textarea>
+    <input id="title" type="text" formControlName="title">
 
     <label for="priority">Priorità:</label>
-    <select id="priority">
-        <option>Alta</option>
-        <option>Media</option>
-        <option>Bassa</option>
+    <select id="priority" formControlName="priority">
+        <option *ngFor="let p of priorityArray" [value]="p.value"> {{ p.label }}</option>
     </select>
-
     <label for="expiration">Scadenza:</label>
-    <input id="expiration" type="date">
+    <input id="expiration" type="date" formControlName="expiration">
 
     <button>Aggiungi</button>
 </div>
