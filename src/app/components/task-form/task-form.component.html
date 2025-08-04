@@ -1,4 +1,4 @@
-<div [formGroup]="taskForm">
+<form [formGroup]="taskForm" (ngSubmit)="submitTask()">
     <h2>Nuova Task</h2>
     <label for="title">Titolo</label>
     <input id="title" type="text" formControlName="title">
@@ -10,5 +10,5 @@
     <label for="expiration">Scadenza:</label>
     <input id="expiration" type="date" formControlName="expiration">
 
-    <button>Aggiungi</button>
-</div>
+    <button type="submit">Aggiungi</button>
+</form>

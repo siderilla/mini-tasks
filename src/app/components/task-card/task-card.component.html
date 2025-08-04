@@ -1,7 +1,7 @@
 <mat-card class="card" appearance="outlined">
     <mat-card-header class="header-section">
-        <mat-card-title>Comprare racchette ping pong</mat-card-title>
-        <mat-card-subtitle>Priorità: Alta - Scadenza 2025-08-01</mat-card-subtitle>
+        <mat-card-title>{{ task.title }}</mat-card-title>
+        <mat-card-subtitle>Priorità: {{ getPriorityLabel(task.priority) }} - Scadenza {{ task.expiration }}</mat-card-subtitle>
     </mat-card-header>
     
     <mat-card-actions class="button-section">

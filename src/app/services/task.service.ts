@@ -10,8 +10,8 @@ export class TaskService {
 
   tasks = signal<Task[]>([])
 
-  addTask(task: Task) {
-    
+  addTask(nuovaTask: Task) {
+    return this.tasks.update(current => [...current, nuovaTask])
   }
 
 }
