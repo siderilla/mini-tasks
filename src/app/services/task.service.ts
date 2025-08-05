@@ -6,12 +6,22 @@ import { Task } from '../models/task';
 })
 export class TaskService {
 
-  constructor() { }
+  constructor() {
+
+    const storedTasks = localStorage.getItem('tasks');
+    if (storedTasks) {
+      this.tasks.set(JSON.parse(storedTasks));
+    }
+
+  }
 
   tasks = signal<Task[]>([])
 
   addTask(nuovaTask: Task) {
-    return this.tasks.update(current => [...current, nuovaTask])
+    this.tasks.update(current => [...current, nuovaTask]);
+    localStorage.setItem('tasks', JSON.stringify(this.tasks()));
   }
 
+  
+  
 }

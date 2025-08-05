@@ -1,3 +1,11 @@
 <div>
     <app-task-card *ngFor="let task of tasks()" [task]="task"></app-task-card>
 </div>
+<div>
+    <select [formControl]="filterControl">
+        <option value="all">Tutti</option>
+        <option value="completed">Completati</option>
+        <option value="active">Attivi</option>
+    </select>
+    <p>Totali: {{ totalCount() }}, Attivi: {{ activeCount() }}, Completati: {{ completedCount() }}</p>
+</div>
